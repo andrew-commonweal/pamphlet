@@ -24,10 +24,13 @@ jobs:
       - name: ListCurrentDir
         run: |
           echo $PWD
+          dir
           cd ..
           echo $PWD
+          dir
           cd ..
           echo $PWD
+          dir
       
       - name: ReadLimerick
         id: readPoem
