@@ -21,12 +21,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     
-      - uses: radcortez/project-metadata-action@master
-        name: RetrievePoem
-        id: PoemYaml
+      - name: Read package.json
+        id: readPoem
+        uses: juliangruber/read-file-action@v1
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          metadata-file-path: 'works/limerick.poem'
+          path: 'works/limerick.poem'
+
         
       - name: WriteContent
-        run: echo ${{steps.PoemYaml.outputs.content}}
+        run: echo ${{ steps.readPoem.outputs.content }}
