@@ -22,7 +22,12 @@ jobs:
     steps:
     
       - name: ListCurrentDir
-        run: echo $PWD
+        run: |
+          echo $PWD
+          cd ..
+          echo $PWD
+          cd ..
+          echo $PWD
       
       - name: ReadLimerick
         id: readPoem
