@@ -20,7 +20,7 @@ jobs:
     
     defaults:
       run:
-        working-directory:  ${{ github.workspace }}/repo/works
+        working-directory:  ${{ github.workspace }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
