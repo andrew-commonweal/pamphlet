@@ -25,11 +25,7 @@ jobs:
         run: |
           echo $PWD
           dir
-          cd ..
-          echo $PWD
-          dir
-          cd ..
-          echo $PWD
+          cd $GITHUB_REPOSITORY
           dir
       
       - name: ReadLimerick
