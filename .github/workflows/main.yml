@@ -24,8 +24,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: EchoCurrentDir
+      - name: EchoCurrentDirName
         run: echo $PWD
+        
+      - name: EchoCurrentDirContents
         run: echo dir
           
       
