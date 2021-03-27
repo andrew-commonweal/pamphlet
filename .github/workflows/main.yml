@@ -21,7 +21,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     
-      - name: Read package.json
+      - name: ListCurrentDir
+        run: echo $PWD
+      
+      - name: ReadLimerick
         id: readPoem
         uses: juliangruber/read-file-action@v1
         with:
