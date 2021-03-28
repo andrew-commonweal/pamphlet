@@ -41,7 +41,7 @@ jobs:
         id: readPoem
         uses: juliangruber/read-file-action@v1
         with:
-          path: ./works/limerick.poem
+          path: ./worksNunjucks/limerick.poem
 
         
       - name: WriteContent
