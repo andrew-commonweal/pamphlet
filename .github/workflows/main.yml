@@ -26,12 +26,12 @@ jobs:
     steps:
       - name: EchoCurrentDirName
         run: |
-          echo $PWD ;
+          write-host $PWD ;
           Set-Location -Path .. -PassThru; 
-          echo $PWD
+          write-host $PWD
         
       - name: EchoCurrentDirContents
-        run:  Get-ChildItem -Path $PWD
+        run:  write-host Get-ChildItem -Path $PWD
           
           
       - name: ReadLimerick
