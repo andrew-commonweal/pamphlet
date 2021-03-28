@@ -30,10 +30,6 @@ jobs:
       - name: EchoCurrentDirName
         run: |
           Get-ChildItem -Path $PWD
-        
-      - name: EchoCurrentDirContents
-        run:  write-host Get-ChildItem -Path $PWD
-          
           
       - name: ReadLimerick
         id: readPoem
@@ -43,4 +39,4 @@ jobs:
 
         
       - name: WriteContent
-        run: echo ${{ steps.readPoem.outputs.content }}
+        run: write-host ${{ steps.readPoem.outputs.content }}
