@@ -27,7 +27,7 @@ jobs:
       - name: EchoCurrentDirName
         run: |
           echo $PWD ;
-          cd . ;
+          Set-Location -Path .; 
           echo $PWD
         
       - name: EchoCurrentDirContents
