@@ -33,9 +33,12 @@ jobs:
           
       - name: ReadLimerick
         id: readPoem
-        uses: juliangruber/read-file-action@v1
+        uses: CumulusDS/get-yaml-paths-action@v0.1.0
         with:
           path: ./worksRaw/limerick.poem
+          author: author
+          date: date
+          content: content
 
         
       - name: WriteContent
