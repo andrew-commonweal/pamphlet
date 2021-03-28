@@ -32,7 +32,7 @@ jobs:
       - name: EchoCurrentDirName
         run: |
           write-host $PWD;
-          git --git-dir=/pamhplet/.git --work-tree=/pamphlet status
+          git --git-dir=/pamhplet/.github --work-tree=/pamphlet status
           write-host $PWD;
           Get-ChildItem -Path $PWD
         
