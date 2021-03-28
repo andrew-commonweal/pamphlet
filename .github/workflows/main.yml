@@ -35,7 +35,7 @@ jobs:
         id: readPoem
         uses: CumulusDS/get-yaml-paths-action@v0.1.0
         with:
-          path: ./worksRaw/limerick.poem
+          file: ./worksRaw/limerick.poem
           author: author
           date: date
           content: content
