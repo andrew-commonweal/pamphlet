@@ -30,7 +30,7 @@ jobs:
       - name: EchoCurrentDirContents
         run:  |
           cd .
-          Get-ChildItem
+          echo "Get-ChildItem"
           
           
       - name: ReadLimerick
