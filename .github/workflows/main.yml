@@ -26,9 +26,11 @@ jobs:
     steps:
       - name: EchoCurrentDirName
         run: |
-          write-host $PWD ;
+          write-host $PWD;
+          Get-ChildItem -Path $PWD;
           Set-Location -Path .. -PassThru; 
-          write-host $PWD
+          write-host $PWD;
+          Get-ChildItem -Path $PWD
         
       - name: EchoCurrentDirContents
         run:  write-host Get-ChildItem -Path $PWD
