@@ -28,7 +28,10 @@ jobs:
         run: echo $PWD
         
       - name: EchoCurrentDirContents
-        run:  dir
+        run:  |
+          cd .
+          Get-ChildItem
+          
           
       - name: ReadLimerick
         id: readPoem
