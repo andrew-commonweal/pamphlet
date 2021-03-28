@@ -27,13 +27,11 @@ jobs:
       - name: EchoCurrentDirName
         run: |
           echo $PWD ;
-          Set-Location -Path .; 
+          Set-Location -Path .. -PassThru; 
           echo $PWD
         
       - name: EchoCurrentDirContents
-        run:  |
-          cd . ;
-          Get-ChildItem -Path $PWD
+        run:  Get-ChildItem -Path $PWD
           
           
       - name: ReadLimerick
