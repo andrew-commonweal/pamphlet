@@ -18,17 +18,21 @@ jobs:
     # The type of runner that the job will run on
     runs-on: windows-latest
     
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    
+    
     # defaults:
       # run:
         # working-directory:  ${{ github.workspace }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v2
+      
       - name: EchoCurrentDirName
         run: |
           write-host $PWD;
-          Get-ChildItem -Path $PWD;
-          Set-Location -Path .. -PassThru; 
+          git --git-dir=/pamhplet/.git --work-tree=/pamphlet status
           write-host $PWD;
           Get-ChildItem -Path $PWD
         
