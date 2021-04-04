@@ -42,4 +42,4 @@ jobs:
 
         
       - name: WriteContent
-        run: write-host ${{ steps.readPoem.outputs.content }}[1]
+        run: write-host ${{ steps.readPoem.outputs.content[0] }}
